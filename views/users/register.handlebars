@@ -1,0 +1,37 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="row mt-2">
+    <div class="col-md-6 mx-auto">
+        <div class="card card-body">
+            <h3 class="text-center"><img src="/img/logo.png"><br>
+            Account Register</h3>
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control " value="{{name}}" name="name" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" value="{{email}}" class="form-control " name="email" required>
+
+                </div>
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="password" required value="{{password}}" name="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="passward2">Confirm Passward</label>
+                    <input type="password" value="{{password2}}" required name="password2" class="form-control">
+                </div>
+                <input type="submit" class="btn btn-primary btn-large">
+
+            </form>
+        </div>
+    </div>
+
+</div>

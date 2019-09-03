@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div class="row d-flex-wrap ">
+
+        {{#each ideas}}
+
+        <div class="col-12 col-md-6 col-lg-4  m-auto">
+            <div class="card card-body mb-2">
+                <h4 class="car-title">{{title}}</h4>
+                <p class="card-text">{{details}}</p>
+                <a href="/ideas/edit/{{id}}" class="btn btn-block btn-dark mb-2">Edit</a>
+                <form action="/ideas/{{id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE"> 
+                    <input type="submit" class="btn btn-danger btn-block" value="Delete">
+                </form>
+            </div>
+        </div>
+
+
+        {{else}}
+        <p>No Video Ideas Listed</p>
+        {{/each}}
+    </div>
+</div>
